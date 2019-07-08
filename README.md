@@ -1,5 +1,8 @@
 # Tarock
 
+![](https://media.giphy.com/media/6XePWwgiSWaiI/giphy.gif)
+
+
 ## Run the project locally
 
 **1 -** Prepare the environment:
