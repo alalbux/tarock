@@ -1,7 +1,8 @@
 # Tarock
 
-![](https://media.giphy.com/media/6XePWwgiSWaiI/giphy.gif)
+![](http://media.giphy.com/media/6XePWwgiSWaiI/giphy.gif)
 
+![](http://i.imgur.com/60bts.gif)
 
 ## Run the project locally
 
