@@ -36,34 +36,3 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-new-${{ hashFiles('**/package-lock.json') }}
-
-#   build:
-
-#     runs-on: ubuntu-latest
-
-#     strategy:
-#       matrix:
-#         node-version: [10.x, 12.x, 14.x, 15.x]
-#         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-#     steps:
-#     - uses: actions/checkout@v2
-#     - name: Use Node.js ${{ matrix.node-version }}
-#       uses: actions/setup-node@v2
-#       with:
-#         node-version: ${{ matrix.node-version }}
-#     - name: Load cached dependencies
-#       uses: actions/download-artifact@v1
-#       with:
-#         name: node_modules
-#         path: .
-#     - name: Extract cache
-#       run: tar -xzf node_modules.tar.gz
-#     - uses: actions/cache@v2
-#       with:
-#         path: node_modules
-#         key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
-#     - run: ls -a # DEBUG
-#     - run: npm run install
-#     - run: npm run build --if-present
-#     - run: npm test
