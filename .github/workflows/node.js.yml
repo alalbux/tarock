@@ -2,14 +2,26 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 name: Node.js CI
-
-on:
+on:  
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  repository_dispatch:
 
 jobs:
+  workflow_run_info:
+    name: Information about the workflow run
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_CONTEXT: ${{ toJson(github) }}
+    steps:
+      - name: Show Information
+        run: |
+          echo "This workflow run is triggered by ${{ github.event_name }} ."
+          echo " *****************************************************************************"
+          echo "$GITHUB_CONTEXT"
+          echo " *****************************************************************************"
   printInputs:
     runs-on: ubuntu-latest
     steps:
