@@ -10,6 +10,12 @@ on:
     branches: [ master ]
 
 jobs:
+  printInputs:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Log level: ${{ github.event.inputs.logLevel }}"
+        echo "Tags: ${{ github.event.inputs.tags }}" 
   install:
     name: "Install"
     runs-on: ubuntu-18.04
