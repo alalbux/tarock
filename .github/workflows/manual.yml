@@ -2,13 +2,15 @@
 
 name: Manual workflow
 
-on:
-  workflow_run:
-    workflows: [Install"]
-    branches: [master]
-    types: 
-      - completed
-      - requested
+on: 
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'  
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
